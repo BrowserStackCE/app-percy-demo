@@ -37,7 +37,7 @@ fi
 
 NOW=`date +%d%H%M%S`
 BASE_BRANCH="main-$NOW"
-BRANCH="update-button-$NOW"
+BRANCH="update-test-$NOW"
 if [ ${CI_USER_ID} != '' ]
 then
   BASE_BRANCH=${CI_USER_ID}_${BASE_BRANCH}
@@ -53,12 +53,12 @@ git checkout main
 git checkout -b $BASE_BRANCH
 # git push origin $BASE_BRANCH
 
-# Create the update-button-123123 PR. It is always a fork of the update-button-base branch.
-git checkout update-button-base
+# Create the update-test-123123 PR. It is always a fork of the update-test-base branch.
+git checkout update-test-base
 git checkout -b $BRANCH
-git commit --amend -m 'Change Sign Up button style.'
+git commit --amend -m 'Change test details.'
 # git push origin $BRANCH
-# PR_NUM=$(hub pull-request -b $BASE_BRANCH -m 'Change Sign Up button style.' | grep -oE '[0-9]+')
+# PR_NUM=$(hub pull-request -b $BASE_BRANCH -m 'Change test details.' | grep -oE '[0-9]+')
 
 export PERCY_BRANCH=$BRANCH
 export PERCY_PULL_REQUEST=$PR_NUM
