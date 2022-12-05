@@ -16,6 +16,7 @@ if [[ "$var" =~ ^{.*}$ ]] || [ "$var" == "" ]; then
   -X POST "https://api-cloud.browserstack.com/app-automate/upload" \
   -F "file=@./app/browserstack-demoapp.apk" \
   -F "custom_id=BStackAppAndroid"
+  sleep 180
 fi
 
 # Check if iOS app is uploaded if not then upload new app
@@ -27,6 +28,7 @@ if [[ "$var" =~ ^{.*}$ ]] || [ "$var" == "" ]; then
   -X POST "https://api-cloud.browserstack.com/app-automate/upload" \
   -F "file=@./app/browserstack-demoapp.ipa" \
   -F "custom_id=BStackAppIOS"
+  sleep 180
 fi
 
 if ! [ -x "$(command -v hub)" ]; then
