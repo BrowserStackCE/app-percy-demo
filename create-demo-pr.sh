@@ -1,6 +1,4 @@
 #!/bin/bash
-trap "exit" INT TERM ERR
-trap "kill 0" EXIT
 
 set -e
 
@@ -77,7 +75,3 @@ npm run percy:test
 git checkout main
 git branch -D $BASE_BRANCH
 git branch -D $BRANCH
-
-jobs
-kill %1
-wait
