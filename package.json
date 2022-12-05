@@ -19,6 +19,7 @@
   },
   "scripts": {
     "test": "wdio run resources/conf/wdio-bstack.conf.js",
+    "percy:test": "percy app:exec -- wdio run resources/conf/wdio-bstack.conf.js",
     "generate-report": "./node_modules/allure-commandline/bin/allure generate allure-results --clean && ./node_modules/allure-commandline/bin/allure open"
   },
   "keywords": [
