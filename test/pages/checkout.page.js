@@ -1,4 +1,5 @@
 const Page = require("./page");
+const percyScreenshot = require("@percy/appium-app");
 
 class CheckoutPage extends Page {
   get inpFirstName() {
@@ -44,9 +45,11 @@ class CheckoutPage extends Page {
           },
         ]);
       } else {
-          await driver.hideKeyboard();
+        await driver.hideKeyboard();
       }
     }
+    await browser.pause(2000);
+    await percyScreenshot("Shipping Page");
     await (await this.btnCheckout).click();
   }
 }

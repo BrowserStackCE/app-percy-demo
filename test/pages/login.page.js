@@ -1,4 +1,5 @@
 const Page = require("./page");
+const percyScreenshot = require("@percy/appium-app");
 
 class LoginPage extends Page {
   get loginForm() {
@@ -41,19 +42,21 @@ class LoginPage extends Page {
     let isIOS = driver.isIOS;
     await this.loginForm.waitForDisplayed({ timeout: 3000 });
     await this.ddUsername.click();
-    if(isIOS) {
+    if (isIOS) {
       await this.iOSPickerWheel.addValue(username);
       await this.btnDone.click();
     } else {
       await this.optionUsername(username).click();
     }
     await this.ddPassword.click();
-    if(isIOS) {
+    if (isIOS) {
       await this.iOSPickerWheel.addValue(password);
       await this.btnDone.click();
     } else {
       await this.optionPassword(password).click();
     }
+    await browser.pause(2000);
+    await percyScreenshot("Login Form Details");
     await this.btnSubmit.click();
   }
 }

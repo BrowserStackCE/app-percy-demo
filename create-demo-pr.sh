@@ -63,7 +63,7 @@ git commit --amend -m 'Change test details.'
 export PERCY_BRANCH=$BRANCH
 export PERCY_PULL_REQUEST=$PR_NUM
 
-npm test
+npx percy app:exec -- npm run test
 
 # Create the fake "ci/service: Tests passed" notification on the PR.
 # Uses a personal access token (https://github.com/settings/tokens) which has scope "repo:status".
