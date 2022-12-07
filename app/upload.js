@@ -53,8 +53,11 @@ async function main() {
     );
   }
   // //Upload iOS App
-  if (await noAppExists("BStackAppIOS")) {
-    await uploadApp("./app/browserstack-demoapp.ipa", "BStackAppIOS");
+  if (await noAppExists("BStackAppIOSChanged")) {
+    await uploadApp(
+      "./app/browserstack-demoapp-changed.ipa",
+      "BStackAppIOSChanged"
+    );
   }
 }
 

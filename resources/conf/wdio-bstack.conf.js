@@ -37,7 +37,7 @@ var overrides = {
       os_version: "14",
       gpsEnabled: "true",
       automationName: "XCUITest",
-      app: "BStackAppIOS",
+      app: "BStackAppIOSChanged",
     },
     {
       device: "iPhone 12 Mini",
@@ -45,7 +45,7 @@ var overrides = {
       os_version: "14",
       gpsEnabled: "true",
       automationName: "XCUITest",
-      app: "BStackAppIOS",
+      app: "BStackAppIOSChanged",
     },
   ],
 };
