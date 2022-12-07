@@ -20,14 +20,14 @@ var overrides = {
     {
       device: "Google Pixel 7",
       os_version: "13.0",
-      app: "BStackAppAndroid",
+      app: "BStackAppAndroidChanged",
       autoGrantPermissions: true,
       platformName: "Android",
     },
     {
       device: "Samsung Galaxy A51",
       os_version: "10.0",
-      app: "BStackAppAndroid",
+      app: "BStackAppAndroidChanged",
       autoGrantPermissions: true,
       platformName: "Android",
     },
