@@ -13,7 +13,7 @@
     "@wdio/mocha-framework": "^7.16.13",
     "@wdio/spec-reporter": "^7.16.13",
     "allure-commandline": "^2.13.8",
-    "appium": "^1.22.2",
+    "appium": "^2.0.0",
     "axios": "^1.2.1",
     "chai": "^4.3.4",
     "lodash": "4.17.21"
